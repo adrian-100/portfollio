@@ -13,7 +13,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.jpg" alt="logo" class="logo">
+                <img src="images/logo.png" alt="logo" class="logo">
                 <ul id="sidenav">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -27,15 +27,15 @@
             </nav>
             <div class="header-text">
                 <p>Programer</p>
-                <h1>Hi, I,m <span>Adrian James Q. Padilla</span><br>from the Philippines.</h1>
+                <h1>Hi, I,m <span>Adrian James Q. Padilla</span><br>Grade 12 - ICT</h1>
             </div>
         </div>
     </div>
 
     <script>
-      document.getElementById("downloadButton").addEventListener("click", function() {
-    window.open("https://github.com/adrian-100/portfollio/releases/download/html/_Aj_Portfolio_17497207.apk", "_blank");
-});
+        document.getElementById("downloadButton").addEventListener("click", function () {
+            window.open("https://github.com/adrian-100/portfollio/releases/download/html/_Aj_Portfolio_17497207.apk", "_blank");
+        });
 
     </script>
 
@@ -48,33 +48,23 @@
                 </div>
                 <div class="about-col2">
                     <h1 class="sub-title">About me</h1>
-                    <p id="abtme"> Hello, I'm Adrian James Padilla from Salcedo, Ilocos Sur. With a strong passion for programming, I find immense joy in bringing ideas to life through code. Whether crafting innovative websites or developing efficient applications, I'm driven by the thrill of problem-solving and continuous learning. I'm excited to contribute my skills to the world of technology and make a positive impact.</p>
+                    <p id="abtme"> Hello, I'm Adrian James Padilla from Salcedo, Ilocos Sur. With a strong passion for
+                        programming, I find immense joy in bringing ideas to life through code. Whether crafting
+                        innovative websites or developing efficient applications, I'm driven by the thrill of
+                        problem-solving and continuous learning. I'm excited to contribute my skills to the world of
+                        technology and make a positive impact.</p>
 
-                    <div class="tab-titles">
-                        <p class="tab-links active" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('exp')">Experience</p>
-                        <p class="tab-links" onclick="opentab('edu')">Education</p>
-                    </div>
-                    <div class="tab-contents active" id="skills">
-                        <ul>
-                            <li><span>Web Dev</span><br>Web app Development</li>
-                            <li><span>App Dev</span><br>Building IOS/Andriod Apps</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="exp">
-                        <ul>
-                            <li><span>2030 - Current</span><br>Designing Web/App Interferences</li>
-                            <li><span>2026 - 2029</span><br>Web app Development</li>
-                            <li><span>2023 - 2026</span><br>Building IOS/Andriod Apps</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="edu">
-                        <ul>
-                            <li><span>2023</span><br>Senior High School Student</li>
-                            <li><span>2019 - 2022</span><br>Junior High School Student</li>
-                            <li><span>2012 - 2018</span><br>Elementary Student</li>
-                        </ul>
-                    </div>
+                    <img src="images/ict.png" class="ict" id="myImg" alt="" srcset="">
+                    <div id="myButton" class="btn btn2">View more</div>
+                    <script>
+                        // JavaScript code
+                        const myImg = document.getElementById("myImg");
+                        const myButton = document.getElementById("myButton");
+
+                        myButton.addEventListener("click", function () {
+                            myImg.src = "images/rickroll.gif";
+                        });
+                    </script>
                 </div>
             </div>
         </div>
@@ -87,17 +77,20 @@
                 <div>
                     <i class="fa fa-html5 html-icon"></i>
                     <h2>HTML</h2>
-                    <div id="html" class="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:80"></div>
+                    <div id="html" class="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+                        style="--value:80"></div>
                 </div>
                 <div>
                     <i class="fa fa-css3 css-icon"></i>
                     <h2>CSS</h2>
-                    <div id="css" class="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70"></div>
+                    <div id="css" class="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+                        style="--value:70"></div>
                 </div>
                 <div>
                     <i class="fa-brands fa-js js-icon"></i>
                     <h2>JS</h2>
-                    <div id="js" class="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:55"></div>
+                    <div id="js" class="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"
+                        style="--value:55"></div>
                 </div>
             </div>
         </div>
@@ -137,7 +130,7 @@
                     </div>
                 </div>
             </div>
-            
+
         </div>
     </div>
     <div id="contact">
@@ -161,7 +154,7 @@
                         <textarea name="message" rows="6" placeholder="Your message"></textarea>
                         <button type="submit" class="btn btn2">Submit</button>
                     </form>
-                </div>                
+                </div>
             </div>
         </div>
         <div class="copyright">
@@ -169,20 +162,6 @@
         </div>
     </div>
 </body>
-<script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-
-    function opentab(tabname) {
-        for (tablink of tablinks) {
-            tablink.classList.remove("active-l");
-        } for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active-c");
-        }
-        event.currentTarget.classList.add("active-l");
-        document.getElementById(tabname).classList.add("active-c");
-    }
-</script>
 <script>
     var side = document.getElementById("sidenav");
     function openmenu() {

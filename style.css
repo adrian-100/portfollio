@@ -55,7 +55,6 @@ nav {
 
 .logo {
     width: 140px;
-    mix-blend-mode: multiply
 }
 
 nav ul li {
@@ -135,6 +134,16 @@ nav ul li a:hover::after {
     text-align: justify;
     font-size: 20px;
     line-height: 1.5em
+}
+
+.ict,
+.btn.btn2{
+    display: inline-flex;
+}
+
+.ict{
+    width: 60%;
+    margin: 20px 50px;
 }
 
 .tab-titles {
@@ -340,7 +349,7 @@ nav ul li a:hover::after {
 }
 
 .btn.btn2 {
-    display: inline-block;
+    
     background-color: #ff004f
 }
 
