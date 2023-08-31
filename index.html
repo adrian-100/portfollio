@@ -39,11 +39,7 @@
                 </div>
                 <div class="about-col2">
                     <h1 class="sub-title">About me</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta molestiae commodi voluptates
-                        dolores inventore hic, incidunt quod officia veniam cum quibusdam tempora eligendi doloremque
-                        ratione, modi autem voluptatibus, molestias magni vitae deserunt temporibus quo! Eveniet
-                        aperiam, nam at quia officia temporibus facilis excepturi fuga consectetur tempore dolore magni
-                        officiis illum?</p>
+                    <p id="abtme"> Hello, I'm Adrian James Padilla from Salcedo, Ilocos Sur. With a strong passion for programming, I find immense joy in bringing ideas to life through code. Whether crafting innovative websites or developing efficient applications, I'm driven by the thrill of problem-solving and continuous learning. I'm excited to contribute my skills to the world of technology and make a positive impact.</p>
 
                     <div class="tab-titles">
                         <p class="tab-links active" onclick="opentab('skills')">Skills</p>
@@ -77,28 +73,22 @@
 
     <div id="services">
         <div class="container">
-            <div class="sub-title">My Services</div>
+            <div class="sub-title">My Skills in Every PL</div>
             <div class="services-list">
                 <div>
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fugit quos possimus error
-                        nemo ad, perferendis qui eaque molestias aliquam.</p>
-                    <a href="">learn more</a>
+                    <i class="fa fa-html5 html-icon"></i>
+                    <h2>HTML</h2>
+                    <div id="html" class="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:80"></div>
                 </div>
                 <div>
-                    <i class="fa-solid fa-crop"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fugit quos possimus error
-                        nemo ad, perferendis qui eaque molestias aliquam.</p>
-                    <a href="">learn more</a>
+                    <i class="fa fa-css3 css-icon"></i>
+                    <h2>CSS</h2>
+                    <div id="css" class="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:70"></div>
                 </div>
                 <div>
-                    <i class="fa-brands fa-app-store"></i>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis fugit quos possimus error
-                        nemo ad, perferendis qui eaque molestias aliquam.</p>
-                    <a href="">learn more</a>
+                    <i class="fa-brands fa-js js-icon"></i>
+                    <h2>JS</h2>
+                    <div id="js" class="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="--value:55"></div>
                 </div>
             </div>
         </div>
@@ -138,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
+            
         </div>
     </div>
     <div id="contact">
@@ -154,16 +144,15 @@
                         <a href=""><i class="fa-brands fa-instagram"></i></a>
                         <a href=""><i class="fa-brands fa-linkedin"></i></a>
                     </div>
-                    <a href="" download class="btn btn2">Download CV</a>
                 </div>
                 <div class="contact-r">
-                    <form>
-                        <input type="text" placeholder="Your name" required>
-                        <input type="email" name="" id="" placeholder="Your email" required>
-                        <textarea name="" id="" rows="6" placeholder="Your message"></textarea>
-                        <button type="submit" class="btn btn2">submit</button>
+                    <form action="mailto:ajpadilla1206@gmail.com" method="post" enctype="text/plain">
+                        <input type="text" name="name" placeholder="Your name" required>
+                        <input type="email" name="email" placeholder="Your email" required>
+                        <textarea name="message" rows="6" placeholder="Your message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
                     </form>
-                </div>
+                </div>                
             </div>
         </div>
         <div class="copyright">
