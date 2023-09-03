@@ -11,11 +11,12 @@ function closemenu() {
 const abt = document.getElementById("abt");
 const myImg = document.getElementById("myImg");
 const myButton = document.getElementById("myButton");
-const audio = document.getElementById("audio");
+
 let originalSrc;
 let originalAbt;
 
 myButton.addEventListener("click", function () {
+  const audio = document.getElementById("audio");
   audio.play();
   originalAbt = abt.src;
   originalSrc = myImg.src;
