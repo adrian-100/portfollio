@@ -150,6 +150,7 @@ nav ul li a:hover::after {
   text-align: justify;
   font-size: 20px;
   line-height: 1.5em;
+  color: white;
 }
 
 .container2 {
@@ -268,6 +269,17 @@ div[class="progressbar"]::before {
 
 .progressbar {
   margin: auto;
+}
+
+@keyframes growProgressBar {
+  0%,
+  33% {
+    --pgPercentage: 0;
+  }
+
+  100% {
+    --pgPercentage: var(--value);
+  }
 }
 
 /* portfolio */
@@ -512,80 +524,17 @@ nav .fas {
   }
 }
 
-@keyframes growProgressBar {
-  0%,
-  33% {
-    --pgPercentage: 0;
-  }
-
-  100% {
-    --pgPercentage: var(--value);
-  }
-<<<<<<< HEAD
-}
-
-#html,
-.html-icon {
-  --fg: rgb(227, 126, 3);
-  color: #e37e03;
-}
-
-#css,
-.css-icon {
-  --fg: rgb(61, 143, 224);
-  color: #3d8fe0;
-}
-
-#js,
-.js-icon {
-  --fg: rgb(226, 230, 13);
-  color: #e2e60d;
-}
-
-div[class="progressbar"] {
-  --size: 12rem;
-  --bg: #def;
-  --pgPercentage: var(--value);
-  animation: growProgressBar 3s 1 forwards;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: radial-gradient(
-      closest-side,
-      #fff 80%,
-      transparent 0 99.9%,
-      #fff 0
-    ),
-    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: calc(var(--size) / 5);
-  color: var(--fg);
-}
-
-div[class="progressbar"]::before {
-  counter-reset: percentage var(--value);
-  content: counter(percentage) "%";
-}
-
-.progressbar {
-  margin: auto;
-}
-
-
-
 #bg-selector {
-	font-size: 1em;
-	font-style: italic;
+  font-size: 1em;
+  font-style: italic;
+  margin: 35px 0;
 }
 .color {
-	width: 24px;
-	height: 24px;
-	border: 1px solid #555;
-	display: inline-block;
-	margin: 0 0 0 0.2em;
-	cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  margin: 0 0 0 0.2em;
+  cursor: pointer;
   padding: 2px;
 }
 .color img {
@@ -594,19 +543,18 @@ div[class="progressbar"]::before {
   display: block;
 }
 .black {
-	background-color: #000;
+  background-color: #000;
 }
-.gray,
-.picker {
-	background-color: #eaeaea;
+.purple{
+  background-color: #93269d;
 }
-.white {
-	background-color: #fff;
+.orange {
+  background-color: #ff5500;
 }
 .blue {
-	background-color: #00529c;
+  background-color: #00529c;
 }
-#colorpicker { visibility: hidden; }
-=======
+#colorpicker {
+  visibility: hidden;
 }
->>>>>>> 78ff270d85a5b8c1c8e345f62654b8ea8f15bd51
+
