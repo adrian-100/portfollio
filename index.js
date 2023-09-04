@@ -21,7 +21,7 @@ myButton.addEventListener("click", function () {
   originalAbt = abt.src;
   originalSrc = myImg.src;
   // Store the original source
-  myImg.src = ".images/RickAst.gif"; // Change the source to the new image
+  myImg.src = "./images/RickAst.gif"; // Change the source to the new image
   abt.src =
     "https://steamuserimages-a.akamaihd.net/ugc/53244775122741846/B36FD8A0C7F32658A2958B94BCCE075B09AF5E59/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true";
   setTimeout(function () {
