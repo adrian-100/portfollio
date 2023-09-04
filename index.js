@@ -21,7 +21,7 @@ myButton.addEventListener("click", function () {
   originalAbt = abt.src;
   originalSrc = myImg.src;
   // Store the original source
-  myImg.src = ".images/RickAst.gif"; // Change the source to the new image
+  myImg.src = "./images/RickAst.gif"; // Change the source to the new image
   abt.src =
     "https://steamuserimages-a.akamaihd.net/ugc/53244775122741846/B36FD8A0C7F32658A2958B94BCCE075B09AF5E59/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true";
   setTimeout(function () {
@@ -38,4 +38,27 @@ document
       "https://github.com/adrian-100/portfollio/releases/download/html/_Aj_Portfolio_17497207.apk",
       "_blank"
     );
+  });
+
+  $(document).ready(function () {
+    // typing animation
+    (function ($) {
+      $.fn.writeText = function (content) {
+        var contentArray = content.split(""),
+          current = 0,
+          elem = this;
+        setInterval(function () {
+          if (current < contentArray.length) {
+            elem.text(elem.text() + contentArray[current++]);
+          }
+        }, 80);
+      };
+    })(jQuery);
+  
+    // input text for typing animation
+    $("#holder").writeText("WEB DESIGNER + FRONT-END DEVELOPER");
+  
+    // initialize wow.js
+    new WOW().init();
+  
   });
