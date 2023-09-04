@@ -28,7 +28,7 @@ html {
 }
 
 body {
-  background-color: #080808;
+  background: rgba(0, 0, 0, 0.929);
   color: #fff;
 }
 
@@ -221,6 +221,55 @@ nav ul li a:hover::after {
   text-transform: capitalize;
 }
 
+#html,
+.html-icon {
+  --fg: rgb(227, 126, 3);
+  color: #e37e03;
+}
+
+#css,
+.css-icon {
+  --fg: rgb(61, 143, 224);
+  color: #3d8fe0;
+}
+
+#js,
+.js-icon {
+  --fg: rgb(226, 230, 13);
+  color: #e2e60d;
+}
+
+div[class="progressbar"] {
+  --size: 12rem;
+  --bg: #def;
+  --pgPercentage: var(--value);
+  animation: growProgressBar 3s 1 forwards;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: radial-gradient(
+      closest-side,
+      #fff 80%,
+      transparent 0 99.9%,
+      #fff 0
+    ),
+    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: calc(var(--size) / 5);
+  color: var(--fg);
+}
+
+div[class="progressbar"]::before {
+  counter-reset: percentage var(--value);
+  content: counter(percentage) "%";
+}
+
+.progressbar {
+  margin: auto;
+}
+
 /* portfolio */
 #portfolio {
   padding: 50px 0;
@@ -272,7 +321,7 @@ nav ul li a:hover::after {
 
 .layer a {
   margin-top: 20px;
-  color: #ff004f;
+  color: red;
   text-decoration: none;
   font-size: 18px;
   line-height: 60px;
@@ -295,7 +344,7 @@ nav ul li a:hover::after {
   display: block;
   margin: 50px auto;
   width: fit-content;
-  border: 1px solid #ff004f;
+  border: 1px solid red;
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
@@ -303,6 +352,7 @@ nav ul li a:hover::after {
   transition: 0.5s;
 }
 
+/* contact */
 .contact-l {
   flex-basis: 35%;
 }
@@ -316,7 +366,7 @@ nav ul li a:hover::after {
 }
 
 .contact-l p i {
-  color: #ff004f;
+  color: red;
   margin-right: 15px;
 }
 
@@ -334,12 +384,16 @@ nav ul li a:hover::after {
 }
 
 .social-icons a:hover {
-  color: #ff004f;
+  color: red;
   transform: translateY(-5px);
 }
 
 .btn.btn2 {
-  background-color: #ff004f;
+  background-color: rgba(255, 0, 0, 0.79);
+}
+
+.btn.btn2:hover {
+  background-color: red;
 }
 
 .contact-r form {
@@ -377,7 +431,7 @@ form .btn2 {
 }
 
 .copyright i {
-  color: #ff004f;
+  color: red;
 }
 
 nav .fas {
@@ -404,7 +458,7 @@ nav .fas {
   }
 
   nav ul {
-    background-color: #ff004f;
+    background-color: rgb(255, 0, 0);
     position: fixed;
     top: 0;
     right: -260px;
@@ -418,6 +472,10 @@ nav .fas {
   nav ul li {
     display: block;
     margin: 25px;
+  }
+
+  nav ul li a {
+    color: white;
   }
 
   nav ul .fas {
@@ -463,53 +521,4 @@ nav .fas {
   100% {
     --pgPercentage: var(--value);
   }
-}
-
-#html,
-.html-icon {
-  --fg: rgb(227, 126, 3);
-  color: #e37e03;
-}
-
-#css,
-.css-icon {
-  --fg: rgb(61, 143, 224);
-  color: #3d8fe0;
-}
-
-#js,
-.js-icon {
-  --fg: rgb(226, 230, 13);
-  color: #e2e60d;
-}
-
-div[class="progressbar"] {
-  --size: 12rem;
-  --bg: #def;
-  --pgPercentage: var(--value);
-  animation: growProgressBar 3s 1 forwards;
-  width: var(--size);
-  height: var(--size);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: radial-gradient(
-      closest-side,
-      #fff 80%,
-      transparent 0 99.9%,
-      #fff 0
-    ),
-    conic-gradient(var(--fg) calc(var(--pgPercentage) * 1%), var(--bg) 0);
-  font-family: Helvetica, Arial, sans-serif;
-  font-size: calc(var(--size) / 5);
-  color: var(--fg);
-}
-
-div[class="progressbar"]::before {
-  counter-reset: percentage var(--value);
-  content: counter(percentage) "%";
-}
-
-.progressbar {
-  margin: auto;
 }
