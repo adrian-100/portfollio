@@ -101,17 +101,29 @@ nav ul li a:hover::after {
 }
 
 .header-text h1 span {
-  color: transparent;
-  background: linear-gradient(
-    to bottom,
-    #3d0c0c,
-    #6b0c14,
-    #9b0715,
-    #cd0011,
-    #ff0000
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
+  animation: color 4s infinite;
+}
+
+@keyframes color {
+  0% {
+    color: red;
+  }
+
+  25% {
+    color: #ff004f;
+  }
+
+  50% {
+    color: #000;
+  }
+
+  75% {
+    color: #262626;
+  }
+
+  100% {
+    color: red;
+  }
 }
 
 /* about */
