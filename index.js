@@ -42,36 +42,56 @@ document
 
 
 
-  $(function() {
-    //bg color selector
-    $(".color").click(function(){
-      var color = $(this).attr("data-value");
-      $("body").css("background-color", color);
-    });
-    
-    //add color picker if supported
-    if (Modernizr.inputtypes.color) {
-      $(".picker").css("display", 'inline-block');
-      var c = document.getElementById('colorpicker');
-      c.addEventListener('change', function(e) {
-        //d.innerHTML = c.value;
-        var color = c.value;
-        $("body").css("background-color", color);
-      }, false);
-    }
+$(function () {
+  //bg color selector
+  $(".color").click(function () {
+    var color = $(this).attr("data-value");
+    $("body").css("background-color", color);
   });
-  function pickColor() {
-    $("#colorpicker").click();
+
+  //add color picker if supported
+  if (Modernizr.inputtypes.color) {
+    $(".picker").css("display", 'inline-block');
+    var c = document.getElementById('colorpicker');
+    c.addEventListener('change', function (e) {
+      //d.innerHTML = c.value;
+      var color = c.value;
+      $("body").css("background-color", color);
+    }, false);
   }
+});
+function pickColor() {
+  $("#colorpicker").click();
+}
 
 
-  $(function() {
-    // loading Effect
-  $(window).load(function() {
+$(function () {
+  // loading Effect
+  $(window).load(function () {
     $(this).scrollTop(0);
     $(".se-pre-con").fadeOut(3000);//The time it take
   });
-  window.onbeforeunload = function() {
+  window.onbeforeunload = function () {
     window.scrollTo(0, 0);
   };
 });
+
+// back to top button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
