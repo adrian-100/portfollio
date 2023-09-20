@@ -413,24 +413,6 @@ div[class="progressbar"]::before {
   margin-right: 15px;
 }
 
-.social-icons {
-  margin-top: 30px;
-}
-
-.social-icons a {
-  text-decoration: none;
-  font-size: 30px;
-  margin-right: 15px;
-  color: #ababab;
-  display: inline-block;
-  transition: 0.5s;
-}
-
-.social-icons a:hover {
-  color: red;
-  transform: translateY(-5px);
-}
-
 .btn.btn2 {
   background-color: rgba(255, 0, 0, 0.79);
 }
