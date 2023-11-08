@@ -65,17 +65,6 @@ function pickColor() {
 }
 
 
-$(function () {
-  // loading Effect
-  $(window).load(function () {
-    $(this).scrollTop(0);
-    $(".se-pre-con").fadeOut(3000);//The time it take
-  });
-  window.onbeforeunload = function () {
-    window.scrollTo(0, 0);
-  };
-});
-
 // back to top button
 let mybutton = document.getElementById("myBtn");
 
